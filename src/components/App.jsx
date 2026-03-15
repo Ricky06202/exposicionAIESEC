@@ -30,14 +30,14 @@ function AppContent() {
 
       <Navbar />
       
-      <main className="relative z-10 flex-1 flex items-center justify-center">
+      <main className="relative z-10 flex-1 flex items-center justify-center pt-20 pb-4">
         <SlideDisplay>
           {renderSlide()}
         </SlideDisplay>
       </main>
 
       {/* Footer Branding */}
-      <footer className="relative z-10 p-8 flex justify-between items-center text-white/20 text-xs font-medium tracking-widest uppercase">
+      <footer className="relative z-10 px-8 py-4 flex justify-between items-center text-white/20 text-xs font-medium tracking-widest uppercase">
         <div>Web Dev Masters</div>
         <div>2026 - Presentación Interactiva</div>
       </footer>
