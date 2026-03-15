@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from './Navbar';
 import SlideDisplay from './SlideDisplay';
 import { SlideProvider, useSlides } from './SlideProvider';
-import { IntroSlide, SectionsSlide, UXUISlide, TypesSlide, FoodHeroSlide, OGVSlide, StackSlide } from './Slides';
+import { IntroSlide, SectionsSlide, UXUISlide, TypesSlide, FoodHeroSlide, OGVSlide } from './Slides';
 
 function AppContent() {
   const { currentSlideIndex } = useSlides();
@@ -15,7 +15,6 @@ function AppContent() {
       case 3: return <TypesSlide />;
       case 4: return <FoodHeroSlide />;
       case 5: return <OGVSlide />;
-      case 6: return <StackSlide />;
       default: return <IntroSlide />;
     }
   };

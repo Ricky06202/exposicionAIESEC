@@ -9,7 +9,6 @@ export const slides = [
   { id: 'types', title: 'Tipos Web', subtitle: 'Estáticas vs Dinámicas' },
   { id: 'foodhero', title: 'Food Hero', subtitle: 'Landing Page Ejemplo' },
   { id: 'ogv', title: 'OGV', subtitle: 'Landing Page Ejemplo' },
-  { id: 'stack', title: 'Despliegue', subtitle: 'Lanzamiento Real' },
 ];
 
 export function SlideProvider({ children }) {
