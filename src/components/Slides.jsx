@@ -72,7 +72,7 @@ export const SectionsSlide = () => {
   ];
 
   return (
-    <div className="max-w-6xl w-full px-6 pt-20 pb-8 flex flex-col lg:flex-row gap-10 items-start overflow-y-auto max-h-[85vh]">
+    <div className="max-w-6xl w-full px-6 pt-32 pb-8 flex flex-col lg:flex-row gap-10 items-start overflow-y-auto max-h-[85vh]">
       <div className="flex-1 text-left lg:sticky lg:top-0">
         <h2 className="text-4xl font-bold text-white mb-6">Anatomía Premium de una Web</h2>
         <p className="text-white/60 mb-8 leading-relaxed">
@@ -575,7 +575,7 @@ export const TypesSlide = () => {
     ];
 
     return (
-        <div className="max-w-6xl w-full px-6 flex flex-col items-center pt-20 pb-12 overflow-y-auto max-h-[90vh]">
+        <div className="max-w-6xl w-full px-6 flex flex-col items-center pt-32 pb-12 overflow-y-auto max-h-[90vh]">
             <h2 className="text-3xl font-bold text-white mb-2">Diferentes Caminos, Un Objetivo</h2>
             <p className="text-white/40 mb-8 text-center max-w-2xl text-xs tracking-wide">Toca cada tipo para ver el simulador. Fíjate en el <b>Header</b> y la <b>Barra de Carga</b>.</p>
             
@@ -644,7 +644,7 @@ export const FoodHeroSlide = () => {
   ];
 
   return (
-    <div className="max-w-6xl w-full px-6 pt-20 pb-8 flex flex-col lg:flex-row gap-8 items-start overflow-y-auto max-h-[90vh]">
+    <div className="max-w-6xl w-full px-6 pt-24 pb-8 flex flex-col lg:flex-row gap-8 items-start overflow-y-auto max-h-[90vh]">
       <div className="flex-1 text-left lg:sticky lg:top-0">
         <div className="inline-block px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/30 text-orange-400 text-xs font-bold mb-4">
           EJEMPLO REAL: FOOD HERO
@@ -771,7 +771,7 @@ export const OGVSlide = () => {
   const [showMobile, setShowMobile] = useState(false);
 
   return (
-    <div className="max-w-6xl w-full px-6 pt-20 pb-8 flex flex-col lg:flex-row gap-8 items-start overflow-y-auto max-h-[90vh]">
+    <div className="max-w-6xl w-full px-6 pt-24 pb-8 flex flex-col lg:flex-row gap-8 items-start overflow-y-auto max-h-[90vh]">
       <div className="flex-1 text-left lg:sticky lg:top-0">
         <div className="inline-block px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-400 text-xs font-bold mb-4">
           EJEMPLO REAL: OGV
@@ -914,7 +914,7 @@ export const OGVSlide = () => {
 };
 
 export const StackSlide = () => (
-  <div className="max-w-5xl w-full px-6 flex flex-col items-center overflow-y-auto max-h-[85vh] pt-20 pb-12">
+  <div className="max-w-5xl w-full px-6 flex flex-col items-center overflow-y-auto max-h-[85vh] pt-32 pb-12">
     <h2 className="text-4xl font-bold text-white mb-12">Despliegue: Del Código al Mundo</h2>
     
     <div className="grid md:grid-cols-3 gap-8 w-full mb-12">

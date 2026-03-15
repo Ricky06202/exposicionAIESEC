@@ -30,7 +30,7 @@ function AppContent() {
 
       <Navbar />
       
-      <main className="relative z-10 flex-1 flex items-center justify-center pt-16">
+      <main className="relative z-10 flex-1 flex items-center justify-center">
         <SlideDisplay>
           {renderSlide()}
         </SlideDisplay>
