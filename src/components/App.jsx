@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from './Navbar';
 import SlideDisplay from './SlideDisplay';
 import { SlideProvider, useSlides } from './SlideProvider';
-import { IntroSlide, SectionsSlide, UXUISlide, TypesSlide, StackSlide } from './Slides';
+import { IntroSlide, SectionsSlide, UXUISlide, TypesSlide, FoodHeroSlide, OGVSlide, StackSlide } from './Slides';
 
 function AppContent() {
   const { currentSlideIndex } = useSlides();
@@ -13,7 +13,9 @@ function AppContent() {
       case 1: return <SectionsSlide />;
       case 2: return <UXUISlide />;
       case 3: return <TypesSlide />;
-      case 4: return <StackSlide />;
+      case 4: return <FoodHeroSlide />;
+      case 5: return <OGVSlide />;
+      case 6: return <StackSlide />;
       default: return <IntroSlide />;
     }
   };
@@ -36,7 +38,7 @@ function AppContent() {
 
       {/* Footer Branding */}
       <footer className="relative z-10 p-8 flex justify-between items-center text-white/20 text-xs font-medium tracking-widest uppercase">
-        <div>AIESEC - Web Dev Masters</div>
+        <div>Web Dev Masters</div>
         <div>2026 - Presentación Interactiva</div>
       </footer>
     </div>

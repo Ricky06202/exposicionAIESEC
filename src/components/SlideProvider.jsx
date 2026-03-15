@@ -6,7 +6,9 @@ export const slides = [
   { id: 'intro', title: 'Inicio', subtitle: 'Masterclass Web' },
   { id: 'sections', title: 'Anatomía', subtitle: 'Secciones Premium' },
   { id: 'uxui', title: 'UI vs UX', subtitle: 'Laboratorio Interactivo' },
-  { id: 'types', title: 'Tipos', subtitle: 'Evolución Web' },
+  { id: 'types', title: 'Tipos Web', subtitle: 'Estáticas vs Dinámicas' },
+  { id: 'foodhero', title: 'Food Hero', subtitle: 'Landing Page Ejemplo' },
+  { id: 'ogv', title: 'OGV', subtitle: 'Landing Page Ejemplo' },
   { id: 'stack', title: 'Despliegue', subtitle: 'Lanzamiento Real' },
 ];
 
