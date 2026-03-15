@@ -645,17 +645,16 @@ export const FoodHeroSlide = () => {
 
   return (
     <div className="max-w-6xl w-full px-6 pt-24 pb-8 flex flex-col lg:flex-row gap-8 items-start overflow-y-auto max-h-[90vh]">
-      <div className="flex-1 text-left lg:sticky lg:top-0">
+      <div className="w-full lg:w-[45%] text-left lg:sticky lg:top-0">
         <div className="inline-block px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/30 text-orange-400 text-xs font-bold mb-4">
           EJEMPLO REAL: FOOD HERO
         </div>
-        <h2 className="text-3xl font-bold text-white mb-4">Landing Page Estática: Food Hero</h2>
-        <p className="text-white/50 mb-6 text-sm leading-relaxed">
-          Este es el tipo de página que ustedes van a crear en Canva. <br/>
-          <b>100% estática</b>: solo HTML/CSS, sin base de datos, sin servidor complejo.
+        <h2 className="text-2xl font-bold text-white mb-4">Landing Page Estática</h2>
+        <p className="text-white/50 mb-4 text-sm">
+          Este es el tipo de página que van a crear en Canva. <b>100% estática</b>.
         </p>
         
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-2 mb-6">
+        <div className="grid grid-cols-3 gap-2 mb-4">
           {sections.map((item, i) => (
             <div 
               key={i}
@@ -670,95 +669,75 @@ export const FoodHeroSlide = () => {
           ))}
         </div>
 
-        <div className="p-4 rounded-xl bg-white/5 border border-white/10">
-          <h4 className="text-white font-bold text-sm mb-2 flex items-center gap-2">
-            <Utensils size={14} className="text-orange-500"/> ¿Por qué es estática?
-          </h4>
-          <ul className="text-white/40 text-xs space-y-1">
-            <li>• El menú no cambia a cada rato</li>
-            <li>• No necesita login de usuarios</li>
-            <li>• Solo muestra información</li>
-            <li>• <b>Perfecta para Canva → Exportar → Subir</b></li>
-          </ul>
+        <div className="p-3 rounded-xl bg-white/5 border border-white/10 text-xs text-white/40">
+          • El menú no cambia a cada rato<br/>
+          • No necesita login de usuarios<br/>
+          • Solo muestra información<br/>
+          • <b>Perfecta para Canva</b>
         </div>
       </div>
 
-      <div className="flex-1 w-full">
+      <div className="w-full lg:w-[55%]">
         <MockBrowser title="foodhero.com">
-          <div className="h-full min-h-[600px] bg-white relative">
+          <div className="h-[500px] overflow-y-auto bg-white">
             {/* Header */}
-            <div className={`absolute top-0 left-0 right-0 h-14 bg-white flex items-center justify-between px-4 border-b transition-all ${
-              activeSection === 0 ? 'ring-2 ring-orange-500 ring-offset-2' : ''
-            }`}>
+            <div className={`h-12 bg-white flex items-center justify-between px-3 border-b ${activeSection === 0 ? 'ring-2 ring-orange-500' : ''}`}>
               <div className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-orange-500 rounded-lg flex items-center justify-center text-white font-bold">H</div>
-                <span className="font-bold text-gray-800 text-sm">Food Hero</span>
+                <div className="w-6 h-6 bg-orange-500 rounded flex items-center justify-center text-white text-xs font-bold">H</div>
+                <span className="font-bold text-gray-800 text-xs">Food Hero</span>
               </div>
-              <div className="flex gap-3">
-                <span className="text-gray-600 text-xs">Menú</span>
-                <span className="text-gray-600 text-xs">Nosotros</span>
-                <span className="text-gray-600 text-xs">Contacto</span>
+              <div className="flex gap-2">
+                <span className="text-gray-600 text-[10px]">Menú</span>
+                <span className="text-gray-600 text-[10px]">Nosotros</span>
               </div>
             </div>
 
             {/* Hero */}
-            <div className={`absolute top-14 left-0 right-0 h-64 bg-gradient-to-br from-orange-100 to-orange-50 flex items-center justify-center transition-all ${
-              activeSection === 1 ? 'ring-2 ring-orange-500 ring-offset-2' : ''
-            }`}>
-              <div className="text-center">
-                <h1 className="text-3xl font-black text-gray-800 mb-2">Los Mejores Burgers</h1>
-                <p className="text-gray-500 text-sm mb-4">Entrega en 30 minutos o es gratis</p>
-                <button className="px-6 py-2 bg-orange-500 text-white rounded-full font-bold text-sm">ORDENA YA</button>
-              </div>
+            <div className={`p-6 bg-gradient-to-br from-orange-50 to-orange-100 text-center ${activeSection === 1 ? 'ring-2 ring-orange-500 ring-offset-1' : ''}`}>
+              <h1 className="text-xl font-black text-gray-800">Los Mejores Burgers</h1>
+              <p className="text-gray-500 text-xs mb-3">Entrega en 30 minutos</p>
+              <button className="px-4 py-1.5 bg-orange-500 text-white rounded-full text-xs font-bold">ORDENA YA</button>
             </div>
 
             {/* Features */}
-            <div className={`absolute top-52 left-0 right-0 p-4 grid grid-cols-3 gap-2 transition-all ${
-              activeSection === 2 ? 'ring-2 ring-orange-500 ring-offset-2' : ''
-            }`}>
-              <div className="text-center p-2">
-                <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-1"><Zap size={14} className="text-orange-500"/></div>
-                <span className="text-[10px] font-bold text-gray-700">Rápido</span>
+            <div className={`p-4 grid grid-cols-3 gap-1 ${activeSection === 2 ? 'ring-2 ring-orange-500 ring-offset-1' : ''}`}>
+              <div className="text-center p-1">
+                <div className="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-1"><Zap size={10} className="text-orange-500"/></div>
+                <span className="text-[9px] font-bold text-gray-700">Rápido</span>
               </div>
-              <div className="text-center p-2">
-                <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-1"><Star size={14} className="text-orange-500"/></div>
-                <span className="text-[10px] font-bold text-gray-700">Premium</span>
+              <div className="text-center p-1">
+                <div className="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-1"><Star size={10} className="text-orange-500"/></div>
+                <span className="text-[9px] font-bold text-gray-700">Premium</span>
               </div>
-              <div className="text-center p-2">
-                <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-1"><ShieldCheck size={14} className="text-orange-500"/></div>
-                <span className="text-[10px] font-bold text-gray-700">Fresco</span>
+              <div className="text-center p-1">
+                <div className="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-1"><ShieldCheck size={10} className="text-orange-500"/></div>
+                <span className="text-[9px] font-bold text-gray-700">Fresco</span>
               </div>
             </div>
 
-            {/* Menu Grid */}
-            <div className={`absolute top-80 left-0 right-0 p-4 transition-all ${
-              activeSection === 3 ? 'ring-2 ring-orange-500 ring-offset-2' : ''
-            }`}>
-              <h3 className="text-lg font-bold text-gray-800 mb-3 text-center">Nuestro Menú</h3>
+            {/* Menu */}
+            <div className={`p-3 ${activeSection === 3 ? 'ring-2 ring-orange-500 ring-offset-1' : ''}`}>
+              <h3 className="text-sm font-bold text-gray-800 mb-2">Nuestro Menú</h3>
               <div className="grid grid-cols-2 gap-2">
-                <div className="bg-gray-50 rounded-lg p-2">
-                  <div className="h-12 bg-gray-200 rounded mb-1"/>
-                  <div className="h-2 bg-gray-200 rounded w-3/4"/>
+                <div className="bg-gray-50 rounded p-1.5">
+                  <div className="h-8 bg-gray-200 rounded mb-1"/>
+                  <div className="h-1.5 bg-gray-200 rounded w-3/4"/>
                 </div>
-                <div className="bg-gray-50 rounded-lg p-2">
-                  <div className="h-12 bg-gray-200 rounded mb-1"/>
-                  <div className="h-2 bg-gray-200 rounded w-3/4"/>
+                <div className="bg-gray-50 rounded p-1.5">
+                  <div className="h-8 bg-gray-200 rounded mb-1"/>
+                  <div className="h-1.5 bg-gray-200 rounded w-3/4"/>
                 </div>
               </div>
             </div>
 
             {/* CTA */}
-            <div className={`absolute bottom-28 left-0 right-0 p-4 text-center transition-all ${
-              activeSection === 4 ? 'ring-2 ring-orange-500 ring-offset-2' : ''
-            }`}>
-              <button className="px-8 py-3 bg-orange-500 text-white rounded-full font-bold">PEDIR AHORA</button>
+            <div className={`p-4 text-center ${activeSection === 4 ? 'ring-2 ring-orange-500 ring-offset-1' : ''}`}>
+              <button className="px-6 py-2 bg-orange-500 text-white rounded-full text-xs font-bold">PEDIR AHORA</button>
             </div>
 
             {/* Footer */}
-            <div className={`absolute bottom-0 left-0 right-0 h-12 bg-gray-800 flex items-center justify-center transition-all ${
-              activeSection === 5 ? 'ring-2 ring-orange-500 ring-offset-2' : ''
-            }`}>
-              <span className="text-white/60 text-[10px]">© 2026 Food Hero - Todos los derechos reservados</span>
+            <div className={`h-10 bg-gray-800 flex items-center justify-center ${activeSection === 5 ? 'ring-2 ring-orange-500' : ''}`}>
+              <span className="text-white/60 text-[9px]">© 2026 Food Hero</span>
             </div>
           </div>
         </MockBrowser>
@@ -772,139 +751,111 @@ export const OGVSlide = () => {
 
   return (
     <div className="max-w-6xl w-full px-6 pt-24 pb-8 flex flex-col lg:flex-row gap-8 items-start overflow-y-auto max-h-[90vh]">
-      <div className="flex-1 text-left lg:sticky lg:top-0">
+      <div className="w-full lg:w-[45%] text-left lg:sticky lg:top-0">
         <div className="inline-block px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-400 text-xs font-bold mb-4">
           EJEMPLO REAL: OGV
         </div>
-        <h2 className="text-3xl font-bold text-white mb-4">Landing Page Estática: OGV</h2>
-        <p className="text-white/50 mb-6 text-sm leading-relaxed">
-          Otra landing page 100% estática. <b>曝光</b> (OGV = Oportunidad de Grande Vida).<br/>
-          Este estilo es común para eventos, productos digitales o campañas.
+        <h2 className="text-2xl font-bold text-white mb-4">Landing Page Estática</h2>
+        <p className="text-white/50 mb-4 text-sm">
+          Estilo común para eventos, productos digitales o campañas.
         </p>
 
-        <div className="space-y-3 mb-6">
-          <div className="p-3 rounded-lg bg-white/5 border border-white/10">
-            <h4 className="text-white font-bold text-sm mb-1 flex items-center gap-2">
-              <Target size={14} className="text-purple-500"/> Estructura Vanguard
-            </h4>
-            <p className="text-white/40 text-xs">Hero oscuro + gradientes + glassmorphism</p>
+        <div className="space-y-2 mb-4 text-xs">
+          <div className="p-2 rounded bg-white/5 border border-white/10">
+            <span className="text-purple-400 font-bold">Estructura:</span> Hero oscuro + gradientes
           </div>
-          <div className="p-3 rounded-lg bg-white/5 border border-white/10">
-            <h4 className="text-white font-bold text-sm mb-1 flex items-center gap-2">
-              <Rocket size={14} className="text-purple-500"/> Enfoque: Conversión
-            </h4>
-            <p className="text-white/40 text-xs">CTA prominente, countdowns, escasez</p>
+          <div className="p-2 rounded bg-white/5 border border-white/10">
+            <span className="text-purple-400 font-bold">Enfoque:</span> CTA + countdowns
           </div>
         </div>
 
-        <div className="p-4 rounded-xl bg-purple-500/10 border border-purple-500/20">
-          <h4 className="text-purple-400 font-bold text-sm mb-2">🎯 Lo que deben recordar</h4>
-          <ul className="text-white/60 text-xs space-y-1">
-            <li>• <b>Landing = 1 objetivo</b> (registro, compra, descarga)</li>
-            <li>• <b>Sección Hero en 3 segundos</b>: ¿QuéOfreces? + ¿Por qué tú?</li>
-            <li>• <b>CTA claro</b>: Un solo botón principal</li>
-            <li>• <b>Canva → Exportar HTML → Listo</b></li>
-          </ul>
+        <div className="p-3 rounded-xl bg-purple-500/10 border border-purple-500/20 text-xs text-white/60">
+          • <b>Landing = 1 objetivo</b><br/>
+          • <b>Hero en 3 segundos</b><br/>
+          • <b>CTA claro</b><br/>
+          • <b>Canva → Exportar → Listo</b>
         </div>
       </div>
 
-      <div className="flex-1 w-full">
-        <div className="flex gap-2 mb-4">
+      <div className="w-full lg:w-[55%]">
+        <div className="flex gap-2 mb-3">
           <button 
             onClick={() => setShowMobile(false)}
-            className={`px-4 py-2 rounded-lg text-xs font-bold ${!showMobile ? 'bg-purple-500 text-white' : 'bg-white/10 text-white/40'}`}
+            className={`px-3 py-1.5 rounded text-xs font-bold ${!showMobile ? 'bg-purple-500 text-white' : 'bg-white/10 text-white/40'}`}
           >
             Desktop
           </button>
           <button 
             onClick={() => setShowMobile(true)}
-            className={`px-4 py-2 rounded-lg text-xs font-bold ${showMobile ? 'bg-purple-500 text-white' : 'bg-white/10 text-white/40'}`}
+            className={`px-3 py-1.5 rounded text-xs font-bold ${showMobile ? 'bg-purple-500 text-white' : 'bg-white/10 text-white/40'}`}
           >
             Mobile
           </button>
         </div>
 
         <MockBrowser title="ogv-oportunidad.com">
-          <div className={`h-full min-h-[600px] bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 relative overflow-hidden ${showMobile ? 'max-w-[280px] mx-auto' : ''}`}>
-            {/* Floating elements */}
-            <div className="absolute top-10 left-10 w-32 h-32 bg-purple-500/20 rounded-full blur-3xl"/>
-            <div className="absolute bottom-20 right-10 w-40 h-40 bg-pink-500/10 rounded-full blur-3xl"/>
-
+          <div className={`h-[500px] overflow-y-auto bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 ${showMobile ? 'max-w-[200px] mx-auto' : ''}`}>
             {/* Header */}
-            <div className="absolute top-0 left-0 right-0 h-16 flex items-center justify-between px-6 border-b border-white/10 backdrop-blur-sm">
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center text-white font-bold text-sm">OGV</div>
-              </div>
-              <button className="px-4 py-1.5 bg-white/10 rounded-full text-white text-xs font-medium border border-white/20">Ver Más</button>
+            <div className="h-12 flex items-center justify-between px-4 border-b border-white/10">
+              <div className="w-6 h-6 bg-gradient-to-br from-purple-500 to-pink-500 rounded text-white text-xs flex items-center justify-center font-bold">OGV</div>
+              <button className="px-2 py-1 bg-white/10 rounded text-white text-[9px]">Ver Más</button>
             </div>
 
             {/* Hero */}
-            <div className="absolute top-20 left-0 right-0 px-6 py-12 text-center">
-              <div className="inline-block px-3 py-1 rounded-full bg-purple-500/20 border border-purple-500/30 text-purple-300 text-[10px] font-bold mb-4">
+            <div className="p-4 text-center">
+              <div className="inline-block px-2 py-0.5 rounded-full bg-purple-500/20 text-purple-300 text-[9px] font-bold mb-2">
                 ⚡ ÚLTIMAS HORAS
               </div>
-              <h1 className="text-3xl md:text-4xl font-black text-white mb-3 leading-tight">
-                Descubre la Oportunidad<br/>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">de Grande Vida</span>
+              <h1 className="text-lg font-black text-white mb-2 leading-tight">
+                Oportunidad<br/>
+                <span className="text-purple-400">de Grande Vida</span>
               </h1>
-              <p className="text-white/50 text-sm mb-6 max-w-sm mx-auto">
-                Transforma tu futuro con nuestro programa exclusivo. Cupo limitado.
-              </p>
-              <button className="px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full font-bold text-sm shadow-lg shadow-purple-500/30">
-                ¡APROVECHA AHORA!
+              <p className="text-white/50 text-[10px] mb-3">Cupo limitado</p>
+              <button className="px-4 py-1.5 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full text-xs font-bold">
+                ¡APROVECHA!
               </button>
             </div>
 
             {/* Stats */}
-            <div className="absolute top-72 left-0 right-0 px-6 flex justify-center gap-8">
+            <div className="px-4 flex justify-center gap-4 mb-3">
               <div className="text-center">
-                <div className="text-2xl font-black text-white">500+</div>
-                <div className="text-[10px] text-white/40 uppercase">Participantes</div>
+                <div className="text-lg font-black text-white">500+</div>
+                <div className="text-[8px] text-white/40">Participantes</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-black text-white">98%</div>
-                <div className="text-[10px] text-white/40 uppercase">Satisfacción</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-black text-white">24h</div>
-                <div className="text-[10px] text-white/40 uppercase">Cupo Restante</div>
+                <div className="text-lg font-black text-white">98%</div>
+                <div className="text-[8px] text-white/40">Satisfacción</div>
               </div>
             </div>
 
             {/* Features */}
-            <div className="absolute top-96 left-0 right-0 px-6 py-6">
-              <div className="grid grid-cols-1 gap-3">
-                <div className="p-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-purple-500/20 flex items-center justify-center"><Star size={18} className="text-purple-400"/></div>
-                    <div>
-                      <h4 className="text-white font-bold text-sm">Contenido Exclusivo</h4>
-                      <p className="text-white/40 text-[10px]">Acceso a materiales premium</p>
-                    </div>
-                  </div>
+            <div className="px-4 mb-3 space-y-2">
+              <div className="p-2 rounded-xl bg-white/5 border border-white/10 flex items-center gap-2">
+                <div className="w-6 h-6 rounded bg-purple-500/20 flex items-center justify-center"><Star size={10} className="text-purple-400"/></div>
+                <div>
+                  <div className="text-white text-xs font-bold">Contenido Exclusivo</div>
+                  <div className="text-white/40 text-[8px]">Acceso premium</div>
                 </div>
-                <div className="p-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-pink-500/20 flex items-center justify-center"><Zap size={18} className="text-pink-400"/></div>
-                    <div>
-                      <h4 className="text-white font-bold text-sm">Resultados Rápidos</h4>
-                      <p className="text-white/40 text-[10px]">Verás cambios en 7 días</p>
-                    </div>
-                  </div>
+              </div>
+              <div className="p-2 rounded-xl bg-white/5 border border-white/10 flex items-center gap-2">
+                <div className="w-6 h-6 rounded bg-pink-500/20 flex items-center justify-center"><Zap size={10} className="text-pink-400"/></div>
+                <div>
+                  <div className="text-white text-xs font-bold">Resultados Rápidos</div>
+                  <div className="text-white/40 text-[8px]">En 7 días</div>
                 </div>
               </div>
             </div>
 
-            {/* CTA Final */}
-            <div className="absolute bottom-20 left-0 right-0 px-6 text-center">
-              <button className="w-full py-4 bg-white text-gray-900 rounded-2xl font-bold text-sm">
+            {/* CTA */}
+            <div className="px-4 mb-3">
+              <button className="w-full py-2 bg-white text-gray-900 rounded-xl text-xs font-bold">
                 QUIERO INSCRIBIRME
               </button>
             </div>
 
             {/* Footer */}
-            <div className="absolute bottom-0 left-0 right-0 h-12 flex items-center justify-center border-t border-white/10">
-              <span className="text-white/30 text-[9px]">© 2026 OGV - Todos los derechos reservados</span>
+            <div className="h-8 flex items-center justify-center border-t border-white/10">
+              <span className="text-white/30 text-[8px]">© 2026 OGV</span>
             </div>
           </div>
         </MockBrowser>
